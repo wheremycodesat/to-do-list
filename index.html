@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <script src="./js/actions.js"></script>
+    <script src="./js/validations.js"></script>
+
+    <title>To do list</title>
+  </head>
+  <body>
+    <div class="inputs">
+      <h1>WORK TO-DOS</h1>
+
+      <b id="entering"
+        >Enter text into the input fiel to add items to your list (max. 28
+        characters)</b
+      ><br />
+
+      <b id="mark">Click the item to mark it as complete</b><br />
+
+      <b id="remove">Click the "X" to remove the item from your list</b><br />
+
+      <form id="item-form" action="#">
+        <b id="error"></b><br />
+        <input
+          type="text"
+          id="item"
+          name="item"
+          placeholder="New item"
+          size="50"
+          maxlength="28"
+          onblur="notEmpty('item', 'error');"
+          onfocus="deleteErrorMessage('item', 'error');"
+        />
+
+        <img
+          src="./icons/write.png"
+          id="submit-btn"
+          width="30"
+          height="30"
+          onclick="addItem(notEmpty('item', 'error'));"
+        />
+      </form>
+    </div>
+
+    <div class="items-container">
+      <ul id="items-list"></ul>
+    </div>
+  </body>
+</html>

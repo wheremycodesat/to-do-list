@@ -1,0 +1,68 @@
+html,
+body {
+  background-color: #469fbc;
+  line-height: 2em;
+}
+
+html .inputs,
+body .inputs {
+  text-align: center;
+}
+
+html .inputs h1,
+body .inputs h1 {
+  color: #fff;
+}
+
+html .inputs b#entering,
+body .inputs b#entering {
+  width: 50%;
+  color: #f9d963;
+}
+
+html .inputs b#mark,
+body .inputs b#mark {
+  width: 50%;
+  color: #19e582;
+}
+
+html .inputs b#remove,
+body .inputs b#remove {
+  width: 50%;
+  color: #1c414d;
+}
+
+html .inputs input[id="item"],
+body .inputs input[id="item"] {
+  width: 50%;
+  height: 2em;
+  border-radius: 5px;
+}
+
+html .items-container,
+body .items-container {
+  text-align: center;
+  overflow: hidden;
+  margin: auto;
+}
+
+html .items-container li,
+body .items-container li {
+  padding-left: 1em;
+  text-align: left;
+  list-style-type: none;
+  border: 1.5px solid #1c414d;
+  border-radius: 5px;
+  background-color: #91c6d7;
+  color: #fff;
+  line-height: 2em;
+}
+
+html .items-container li span,
+body .items-container li span {
+  padding-right: 1em;
+  float: right;
+  font-weight: 200;
+  color: #1c414d;
+}
+/*# sourceMappingURL=main.css.map */
