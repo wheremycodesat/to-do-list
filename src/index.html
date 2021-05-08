@@ -24,14 +24,13 @@
 
       <b id="remove">Click the "X" to remove the item from your list</b><br />
 
-      <form id="item-form" action="#">
+      <form id="item-form" class="item-form" action="#">
         <b id="error"></b><br />
         <input
           type="text"
           id="item"
           name="item"
           placeholder="New item"
-          size="50"
           maxlength="28"
           onblur="notEmpty('item', 'error');"
           onfocus="deleteErrorMessage('item', 'error');"
@@ -47,8 +46,12 @@
       </form>
     </div>
 
-    <div class="items-container">
-      <ul id="items-list"></ul>
+    <div class="container">
+      <div class="items">
+        <ul id="item-list" class="item-list">
+          <li class="list-element"></li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>

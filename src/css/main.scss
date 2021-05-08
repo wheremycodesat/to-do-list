@@ -36,33 +36,54 @@ body {
       color: color(bg-darken);
     }
 
+    .item-form {
+      width: 500px;
+      height: 80px;
+      margin: auto;
+      border: 1px solid black;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
     input[id="item"] {
-      width: 50%;
+      width: 350px;
       height: 2em;
       border-radius: 5px;
     }
   }
 
-  .items-container {
-    text-align: center;
-    overflow: hidden;
+  .container {
+    border: 1px solid black;
+    width: 500px;
+    height: 350px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
     margin: auto;
 
-    li {
-      padding-left: 1em;
-      text-align: left;
-      list-style-type: none;
-      border: 1.5px solid color(bg-darken);
-      border-radius: 5px;
-      background-color: color(bg-lighten);
-      color: #fff;
-      line-height: 2em;
+    .item-list {
+      border: 1px solid black;
 
-      span {
-        padding-right: 1em;
-        float: right;
-        font-weight: 200;
-        color: color(bg-darken);
+      .list-element {
+        margin: 10px 0px 10px 25px;
+        height: 50px;
+        width: 350px;
+
+        list-style-type: none;
+        border: 1.5px solid color(bg-darken);
+        border-radius: 10px;
+        background-color: color(bg-lighten);
+        color: #fff;
+        line-height: 2em;
+
+        .remove-todo {
+          padding-right: 1em;
+          float: right;
+          font-weight: 200;
+          color: color(bg-darken);
+        }
       }
     }
   }

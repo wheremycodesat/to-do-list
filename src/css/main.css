@@ -32,34 +32,63 @@ body .inputs b#remove {
   color: #1c414d;
 }
 
+html .inputs .item-form,
+body .inputs .item-form {
+  width: 500px;
+  height: 80px;
+  margin: auto;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 html .inputs input[id="item"],
 body .inputs input[id="item"] {
-  width: 50%;
+  width: 350px;
   height: 2em;
   border-radius: 5px;
 }
 
-html .items-container,
-body .items-container {
-  text-align: center;
-  overflow: hidden;
+html .container,
+body .container {
+  border: 1px solid black;
+  width: 500px;
+  height: 350px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
   margin: auto;
 }
 
-html .items-container li,
-body .items-container li {
-  padding-left: 1em;
-  text-align: left;
+html .container .item-list,
+body .container .item-list {
+  border: 1px solid black;
+}
+
+html .container .item-list .list-element,
+body .container .item-list .list-element {
+  margin: 10px 0px 10px 25px;
+  height: 50px;
+  width: 350px;
   list-style-type: none;
   border: 1.5px solid #1c414d;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #91c6d7;
   color: #fff;
   line-height: 2em;
 }
 
-html .items-container li span,
-body .items-container li span {
+html .container .item-list .list-element .remove-todo,
+body .container .item-list .list-element .remove-todo {
   padding-right: 1em;
   float: right;
   font-weight: 200;
