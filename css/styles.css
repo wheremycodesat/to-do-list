@@ -1,0 +1,172 @@
+/*Custom properties*/
+:root {
+  --primary: #f8f4e3;
+  --grey: rgb(211, 211, 211);
+  --dark: #2a2b2a;
+  --darkish: #1a1b1a;
+  --black: #000;
+  --white: #fff;
+  --red: #f00;
+
+  --principal-font: "Staatliches", cursive;
+}
+
+/*Global rules*/
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--primary);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--principal-font);
+}
+
+/*Header*/
+.header {
+  text-align: center;
+  font-size: 4.8rem;
+}
+
+/*instructions*/
+.instructions {
+  text-align: center;
+}
+
+.instructions__text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*form*/
+.form-container__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .form-container__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+}
+
+.form__label {
+  font-family: var(--principal-font);
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+}
+
+.form__field {
+  border: 1rem solid var(--grey);
+  border-radius: 0.5rem;
+  font-family: var(--principal-font);
+  font-weight: 100;
+  padding: 1rem;
+  margin-right: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .form__field {
+    width: 21.1333rem; /*basic input width*/
+  }
+}
+
+.form__submit {
+  border: none;
+  color: var(--white);
+  background-color: var(--dark);
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  font-family: var(--principal-font);
+  transition: background-color 0.5s ease;
+}
+
+.form__submit:hover {
+  cursor: pointer;
+  background-color: var(--darkish);
+}
+
+/*Footer*/
+.footer {
+  background-color: var(--grey);
+  padding: 0.3rem;
+  margin: 1rem 0;
+  text-align: center;
+  font-family: var(--principal-font);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/*Todos container*/
+.todos-container {
+  overflow: scroll;
+  margin: 3rem auto;
+  border: 2rem solid var(--grey);
+  border-radius: 1rem;
+  width: 100%;
+  height: 40rem;
+}
+
+@media (min-width: 768px) {
+  .todos-container {
+    width: 70rem;
+    height: 70rem;
+  }
+}
+
+/*Todo*/
+.todos-list {
+  margin: 1rem;
+}
+
+.todo {
+  /*Aligned as flex to put the content in separate corners easily*/
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--grey);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  font-family: var(--principal-font);
+  font-size: 2rem;
+}
+
+.todo--remove {
+  width: 2rem;
+  height: 2rem;
+  color: var(--red);
+}
+
+/*Empty todos list*/
+.temporal-text {
+  text-align: center;
+  font-family: var(--principal-font);
+  font-size: 2rem;
+}

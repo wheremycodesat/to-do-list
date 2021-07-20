@@ -3,55 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do list</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="style" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="preload" as="style" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Work to-dos</h1>
+    </header>
 
-    <link rel="stylesheet" href="./css/main.css" />
+    <main>
+      <section class="instructions">
+        <h2>Instructions</h2>
+
+        <p class="instructions__text">
+          Enter text into the input field to add items to your list (max. 28
+          characters) <br />
+
+          Click the item to mark it as complete <br />
+
+          Click the "X" to remove the item from your list <br />
+        </p>
+      </section>
+
+      <div class="form-container">
+        <form class="form-container__form" id="form">
+          <label class="form__label">To-do name:</label>
+          <input
+            class="form__field"
+            id="todo-name"
+            type="text"
+            placeholder="To-do"
+            onsubmit="addItem()"
+          />
+          <input
+            class="form__submit"
+            id="submit-button"
+            type="submit"
+            value="Add To-do"
+          />
+        </form>
+      </div>
+
+      <div class="todos-container">
+        <div class="todos-list" id="list">
+          <p class="temporal-text" id="temporal-text">The list is empty</p>
+          <!-- Empty list at first -->
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Samuel Velásquez - All rights reserved 2022</p>
+    </footer>
 
     <script src="./js/actions.js"></script>
     <script src="./js/validations.js"></script>
-
-    <title>To do list</title>
-  </head>
-  <body>
-    <div class="inputs">
-      <h1>WORK TO-DOS</h1>
-
-      <b id="entering"
-        >Enter text into the input fiel to add items to your list (max. 28
-        characters)</b
-      ><br />
-
-      <b id="mark">Click the item to mark it as complete</b><br />
-
-      <b id="remove">Click the "X" to remove the item from your list</b><br />
-
-      <form id="item-form" class="item-form" action="#">
-        <b id="error"></b><br />
-        <input
-          type="text"
-          id="item"
-          name="item"
-          placeholder="New item"
-          maxlength="28"
-          onblur="notEmpty('item', 'error');"
-          onfocus="deleteErrorMessage('item', 'error');"
-        />
-
-        <img
-          src="./icons/write.png"
-          id="submit-btn"
-          width="30"
-          height="30"
-          onclick="addItem(notEmpty('item', 'error'));"
-        />
-      </form>
-    </div>
-
-    <div class="container">
-      <div class="items">
-        <ul id="item-list" class="item-list">
-          <li class="list-element"></li>
-        </ul>
-      </div>
-    </div>
   </body>
 </html>
