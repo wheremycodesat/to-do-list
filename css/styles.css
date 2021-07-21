@@ -1,14 +1,28 @@
 /*Custom properties*/
 :root {
-  --primary: #f8f4e3;
+  --primary: #fff;
   --grey: rgb(211, 211, 211);
   --dark: #2a2b2a;
   --darkish: #1a1b1a;
-  --black: #000;
-  --white: #fff;
+  --font-primary-color: #000;
+  --font-secondary-color: #fff;
+  --button-font-color: #fff;
+  --button-bg-color: #2a2b2a;
   --red: #f00;
 
   --principal-font: "Staatliches", cursive;
+}
+
+html[theme="dark-theme"] {
+  --primary: #2a2b2a;
+  --grey: #1a1b1a;
+  --dark: #2a2b2a;
+  --darkish: #1a1b1a;
+  --font-primary-color: #fff;
+  --font-secondary-color: #000;
+  --button-font-color: #fff;
+  --button-bg-color: #111111;
+  --red: #f00;
 }
 
 /*Global rules*/
@@ -34,6 +48,7 @@ h1 {
 
 h2 {
   font-size: 3.4rem;
+  margin: 1.5rem 0;
 }
 
 h3 {
@@ -48,16 +63,19 @@ h3 {
 
 /*Header*/
 .header {
+  color: var(--font-primary-color);
   text-align: center;
   font-size: 4.8rem;
 }
 
 /*instructions*/
 .instructions {
+  color: var(--font-primary-color);
   text-align: center;
 }
 
 .instructions__text {
+  color: var(--font-primary-color);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -78,12 +96,15 @@ h3 {
 }
 
 .form__label {
+  color: var(--font-primary-color);
   font-family: var(--principal-font);
   font-size: 1.8rem;
   margin-right: 0.5rem;
 }
 
 .form__field {
+  background-color: var(--primary);
+  color: var(--font-primary-color);
   border: 1rem solid var(--grey);
   border-radius: 0.5rem;
   font-family: var(--principal-font);
@@ -101,8 +122,8 @@ h3 {
 
 .form__submit {
   border: none;
-  color: var(--white);
-  background-color: var(--dark);
+  color: var(--button-font-color);
+  background-color: var(--button-bg-color);
   padding: 0.8rem;
   border-radius: 0.5rem;
   font-family: var(--principal-font);
@@ -114,20 +135,11 @@ h3 {
   background-color: var(--darkish);
 }
 
-/*Footer*/
-.footer {
-  background-color: var(--grey);
-  padding: 0.3rem;
-  margin: 1rem 0;
-  text-align: center;
-  font-family: var(--principal-font);
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
 /*Todos container*/
 .todos-container {
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
   margin: 3rem auto;
   border: 2rem solid var(--grey);
   border-radius: 1rem;
@@ -151,6 +163,7 @@ h3 {
   /*Aligned as flex to put the content in separate corners easily*/
   display: flex;
   justify-content: space-between;
+  color: var(--font-primary-color);
   background-color: var(--grey);
   padding: 2rem;
   border-radius: 0.5rem;
@@ -166,7 +179,27 @@ h3 {
 
 /*Empty todos list*/
 .temporal-text {
+  color: var(--font-primary-color);
   text-align: center;
   font-family: var(--principal-font);
   font-size: 2rem;
+}
+
+/*Error message*/
+.form-container__error-message {
+  text-align: center;
+  color: var(--red);
+  font-family: var(--principal-font);
+}
+
+/*Footer*/
+.footer {
+  color: var(--font-primary-color);
+  background-color: var(--grey);
+  padding: 0.3rem;
+  margin: 1rem 0;
+  text-align: center;
+  font-family: var(--principal-font);
+  font-size: 1.5rem;
+  font-weight: 400;
 }

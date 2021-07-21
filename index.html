@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" theme="light-theme">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,12 +10,18 @@
     />
     <link rel="preload" as="style" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="preload" as="style" href="./css/toggle.css" />
+    <link rel="stylesheet" href="./css/toggle.css" />
     <link rel="preload" as="style" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header class="header">
       <h1>Work to-dos</h1>
+      <label class="switch">
+        <input class="switch__input" type="checkbox" id="switch" />
+        <span class="slider round"></span>
+      </label>
     </header>
 
     <main>
@@ -23,7 +29,7 @@
         <h2>Instructions</h2>
 
         <p class="instructions__text">
-          Enter text into the input field to add items to your list (max. 28
+          Enter text into the input field to add items to your list (max. 25
           characters) <br />
 
           Click the item to mark it as complete <br />
@@ -33,6 +39,7 @@
       </section>
 
       <div class="form-container">
+        <p class="form-container__error-message" id="error-message"></p>
         <form class="form-container__form" id="form">
           <label class="form__label">To-do name:</label>
           <input
@@ -40,7 +47,7 @@
             id="todo-name"
             type="text"
             placeholder="To-do"
-            onsubmit="addItem()"
+            maxlength="25"
           />
           <input
             class="form__submit"
@@ -64,6 +71,6 @@
     </footer>
 
     <script src="./js/actions.js"></script>
-    <script src="./js/validations.js"></script>
+    <script src="./js/dark_toggle.js"></script>
   </body>
 </html>
