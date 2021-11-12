@@ -13,7 +13,7 @@
   --principal-font: "Staatliches", cursive;
 }
 
-html[theme="dark-theme"] {
+body[class="dark-theme"] {
   --primary: #2a2b2a;
   --grey: #1a1b1a;
   --dark: #2a2b2a;
@@ -40,6 +40,7 @@ html {
 body {
   font-size: 1.6rem;
   background-color: var(--primary);
+  transition: all 0.8s ease;
 }
 
 h1 {
